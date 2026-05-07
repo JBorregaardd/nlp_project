@@ -1,0 +1,592 @@
+{
+  "mode": "hybrid",
+  "top_k": 3,
+  "num_questions": 28,
+  "num_in_scope": 24,
+  "num_out_of_scope": 4,
+  "retrieval_hit_rate": 1.0,
+  "avg_keyword_coverage": 0.8256944444444444,
+  "unknown_accuracy": 1.0,
+  "results": [
+    {
+      "id": "q001",
+      "category": "factual",
+      "question": "Hvad er forkølelse?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Forkølelse",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Forkølelse er en infektion i de øvre luftveje, som skyldes et virus. Det er oftest et såkaldt rhinovirus, der forårsager sygdommen, og der findes flere hundrede forskellige undertyper. Sygdommen angriber næsen og svælget, og man bliver typisk syg 2-3 døgn efter, man er blevet smittet.\n\nKilde: Forkølelse (sundhed.dk)",
+      "sources": [
+        {
+          "title": "Forkølelse",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/forkoelelse/"
+        }
+      ],
+      "retrieval_query": "forkølelse?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q002",
+      "category": "symptoms",
+      "question": "Hvad er typiske symptomer på forkølelse?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Forkølelse",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Typiske symptomer på forkølelse inkluderer ondt i halsen, snue eller løbende næse, tilstoppet næse og hoste. Man kan desuden føle sig alment syg og have let feber i starten af forløbet. Hos børn i deres første leveår ses ofte høj feber, samt at de bliver utilpasse, sover uroligt og spiser mindre.\n\nKilde: Forkølelse",
+      "sources": [
+        {
+          "title": "Forkølelse",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/forkoelelse/"
+        },
+        {
+          "title": "Mononukleose (kyssesyge)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/mononukleose-kyssesyge/"
+        }
+      ],
+      "retrieval_query": "typiske symptomer forkølelse?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q003",
+      "category": "duration",
+      "question": "Hvor længe varer en forkølelse normalt?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Forkølelse",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "En forkølelse er som regel helt væk efter 7-10 døgn. Symptomerne er typisk mest udtalte efter 3-4 døgn.\n\nKilde: Forkølelse",
+      "sources": [
+        {
+          "title": "Forkølelse",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/forkoelelse/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        }
+      ],
+      "retrieval_query": "længe varer forkølelse normalt?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q004",
+      "category": "diagnosis_like",
+      "question": "Jeg har ondt i halsen, løbende næse og hoste. Hvad tror du jeg fejler?",
+      "expected_behavior": "cautious_answer_from_context",
+      "expected_source_title": "Forkølelse",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.75,
+      "unknown_ok": null,
+      "answer": "Dine symptomer kan være forenelige med en forkølelse. Ifølge kilden \"Forkølelse\" er ondt i halsen, løbende næse og hoste genkendelige symptomer på denne virussygdom. Det kan også være foreneligt med mononukleose (kyssesyge), som blandt andet giver ondt i halsen, men her ses typisk også kraftig halsbetændelse og høj feber.",
+      "sources": [
+        {
+          "title": "Forkølelse",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/forkoelelse/"
+        },
+        {
+          "title": "Mononukleose (kyssesyge)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/mononukleose-kyssesyge/"
+        }
+      ],
+      "retrieval_query": "ondt halsen, løbende næse hoste. fejler?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q005",
+      "category": "factual",
+      "question": "Hvad er influenza?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Influenza (sæsoninfluenza)",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.75,
+      "unknown_ok": null,
+      "answer": "Influenza er en infektion i luftvejene, som er forårsaget af enten influenza A- eller influenza B-virus. Virussen inficerer og beskadiger slimhinderne i luftvejene, hvilket kan gøre en mere modtagelig for bakteriel lungebetændelse efterfølgende. Da virusserne ændrer sig fra år til år, bliver man ikke immun og kan blive smittet flere gange.\n\nKilder: Influenzavaccination og Influenza (sæsoninfluenza).",
+      "sources": [
+        {
+          "title": "Influenzavaccination",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenzavaccination/"
+        },
+        {
+          "title": "Influenza A (H1N1)v",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-a-h1n1-v/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        }
+      ],
+      "retrieval_query": "influenza?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q006",
+      "category": "statistics",
+      "question": "Hvor stor en del af befolkningen rammes af sæsoninfluenza hvert år?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Influenza (sæsoninfluenza)",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Sæsoninfluenza rammer hvert år 5-15 % af befolkningen i perioden fra december til marts. I år med en influenzaepidemi kan forekomsten være højere, hvor op til 20 % af befolkningen bliver smittet.\n\nKilder: Influenza (sæsoninfluenza) og Influenzavaccination.",
+      "sources": [
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        },
+        {
+          "title": "Influenzavaccination",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenzavaccination/"
+        }
+      ],
+      "retrieval_query": "stor del befolkningen rammes sæsoninfluenza hvert år?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q007",
+      "category": "diagnosis_like",
+      "question": "Jeg har feber, hoste og muskelsmerter. Kan det være influenza?",
+      "expected_behavior": "cautious_answer_from_context",
+      "expected_source_title": "Influenza (sæsoninfluenza)",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Dine symptomer kan være foreneligt med influenza. Feber, hoste og muskelsmerter er typiske tegn på influenza, som ofte også ledsages af hovedpine og kulderystelser. For de fleste går sygdommen over af sig selv inden for en uge, men hvis feberen varer mere end fem dage, bør man søge læge.\n\nKilder: Influenza (sæsoninfluenza) og Influenzavaccination.",
+      "sources": [
+        {
+          "title": "Influenza A (H1N1)v",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-a-h1n1-v/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        },
+        {
+          "title": "Influenzavaccination",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenzavaccination/"
+        }
+      ],
+      "retrieval_query": "feber, hoste muskelsmerter. kan influenza?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q008",
+      "category": "diagnosis",
+      "question": "Hvordan stilles diagnosen influenza?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Influenza (sæsoninfluenza)",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Diagnosen influenza stilles oftest alene på baggrund af symptomerne. Det er dog muligt at bekræfte diagnosen ved hjælp af en PCR-test, hvor man foretager en podning fra enten næsen, næsesvælget eller svælget. Denne test kan påvise, om der er tale om influenza A eller B virus.\n\nKilder: Influenza (sæsoninfluenza) og Influenza A (H1N1)v.",
+      "sources": [
+        {
+          "title": "Influenzavaccination",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenzavaccination/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        },
+        {
+          "title": "Influenza A (H1N1)v",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-a-h1n1-v/"
+        }
+      ],
+      "retrieval_query": "hvordan stilles diagnosen influenza?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q009",
+      "category": "vaccination",
+      "question": "Er vaccination mod influenza anbefalet?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Influenzavaccination",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.6666666666666666,
+      "unknown_ok": null,
+      "answer": "Ja, vaccination mod influenza anbefales til visse målgrupper, herunder gravide i 2. eller 3. trimester, personer med kroniske sygdomme, svær overvægt eller immundefekt, samt personer i samme husstand som disse. Førtidspensionister tilbydes desuden gratis vaccination. Raske børn og voksne, der ønsker beskyttelse, kan selv vælge at betale for en vaccination. Vaccination reducerer risikoen for et alvorligt sygdomsforløb, herunder indlæggelse og død, hvis man bliver smittet.\n\nKilde: Influenzavaccination",
+      "sources": [
+        {
+          "title": "Influenzavaccination",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenzavaccination/"
+        }
+      ],
+      "retrieval_query": "vaccination influenza anbefalet?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q010",
+      "category": "treatment",
+      "question": "Hvad er oseltamivir?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Antivirusmidler ved influenza",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.6666666666666666,
+      "unknown_ok": null,
+      "answer": "Oseltamivir er et anbefalet antiviralt middel mod influenza (både type A og B). Det tilhører gruppen af neuraminidasehæmmere og kan bruges til at mindske symptomer, komplikationer og sygdommens varighed. Behandlingen kan også anvendes til forebyggelse hos personer i risikogrupper, der har været i tæt kontakt med smittede. Effekten er størst, hvis behandlingen påbegyndes tidligt efter symptomstart.\n\nKilder: Antivirusmidler ved influenza, Influenza A (H1N1)v og Influenza (sæsoninfluenza).",
+      "sources": [
+        {
+          "title": "Antivirusmidler ved influenza",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/virker-oseltamivir-ved-influenza/"
+        },
+        {
+          "title": "Influenza A (H1N1)v",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-a-h1n1-v/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        }
+      ],
+      "retrieval_query": "oseltamivir?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q011",
+      "category": "treatment",
+      "question": "Hvor meget forkorter oseltamivir symptomer på influenza?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Antivirusmidler ved influenza",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Oseltamivir kan forkorte symptomerne på influenza med 12-24 timer, forudsat at behandlingen påbegyndes inden for 48 timer efter, at symptomerne er opstået. En anden kilde angiver, at varigheden af influenza kan reduceres med ét døgn, hvis behandlingen starter mindre end 48 timer efter symptomstart. Medicinen kan i et begrænset omfang mindske symptomer som feber, muskelsmerter, hoste og snue.\n\nKilder: Antivirusmidler ved influenza og Influenza (sæsoninfluenza).",
+      "sources": [
+        {
+          "title": "Antivirusmidler ved influenza",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/virker-oseltamivir-ved-influenza/"
+        },
+        {
+          "title": "Influenza A (H1N1)v",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-a-h1n1-v/"
+        },
+        {
+          "title": "Influenza (sæsoninfluenza)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/influenza-saesoninfluenza/"
+        }
+      ],
+      "retrieval_query": "forkorter oseltamivir symptomer influenza?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q012",
+      "category": "factual",
+      "question": "Hvad er mononukleose også kendt som?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Mononukleose (kyssesyge)",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.3333333333333333,
+      "unknown_ok": null,
+      "answer": "Mononukleose er også kendt som \"kyssesyge\". Navnet stammer fra, at smitten primært sker via spyt ved intimkontakt.\n\nKilde: Mononukleose (kyssesyge)",
+      "sources": [
+        {
+          "title": "Mononukleose (kyssesyge)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/mononukleose-kyssesyge/"
+        }
+      ],
+      "retrieval_query": "mononukleose kendt som?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q013",
+      "category": "transmission",
+      "question": "Hvordan smitter kyssesyge typisk?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Mononukleose (kyssesyge)",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Kyssesyge smitter primært via spyt og gennem intimkontakt. Det kan også i mindre grad smitte via dråber eller aerosol ved hoste og nys. Man kan smitte i en længere periode, da virus kan findes i spyttet op til 1-1,5 år efter infektionen, selvom risikoen er størst under den akutte fase.\n\nKilde: Mononukleose (kyssesyge)",
+      "sources": [
+        {
+          "title": "Mononukleose (kyssesyge)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/mononukleose-kyssesyge/"
+        }
+      ],
+      "retrieval_query": "hvordan smitter kyssesyge typisk?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q014",
+      "category": "diagnosis_like",
+      "question": "Jeg har høj feber, ondt i halsen og hævede lymfekirtler på halsen. Hvad kan det være?",
+      "expected_behavior": "cautious_answer_from_context",
+      "expected_source_title": "Mononukleose (kyssesyge)",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Dine symptomer kan være forenelige med mononukleose (kyssesyge). Infektionen viser sig typisk som en kraftig halsbetændelse med høj feber, ondt i halsen og hævede lymfekirtler på halsen. Det kan også skyldes et andet herpesvirus, cytomegalovirus, som kan give et lignende sygdomsforløb. Du bør søge læge i tilfælde af feber eller hævede lymfekirtler på halsen gennem længere tid.\n\nKilde: Mononukleose (kyssesyge)",
+      "sources": [
+        {
+          "title": "Mononukleose (kyssesyge)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/mononukleose-kyssesyge/"
+        }
+      ],
+      "retrieval_query": "høj feber, ondt halsen hævede lymfekirtler halsen. kan være?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q015",
+      "category": "factual",
+      "question": "Hvad er norovirus?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Tarminfektion med norovirus",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Norovirus er et meget smitsomt virus, der forårsager en akut maveinfektion, som på dansk også kaldes \"Roskildesyge\". Infektionen medfører typisk symptomer som opkastninger og vandig diarré, men mange oplever også hovedpine, muskelsmerter og let feber. Sygdommen har normalt et mildt forløb, der går over af sig selv i løbet af 2-3 døgn.\n\nKilde: Tarminfektion med norovirus",
+      "sources": [
+        {
+          "title": "Tarminfektion med norovirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/tarminfektion-med-norovirus/"
+        }
+      ],
+      "retrieval_query": "norovirus?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q016",
+      "category": "symptoms",
+      "question": "Jeg har kastet op, har diarré og lidt feber. Hvad tror du jeg fejler?",
+      "expected_behavior": "cautious_answer_from_context",
+      "expected_source_title": null,
+      "retrieval_hit": null,
+      "keyword_coverage": 0.4,
+      "unknown_ok": null,
+      "answer": "Dine symptomer kan være foreneligt med omgangssyge (virus). Infektion med virus i tarmen, som også kaldes Roskildesyge, er en almindelig årsag til både diarré og opkast. Det mest almindelige er en kombination af disse symptomer. Svaret er baseret på kilden \"Omgangssyge (virus)\".",
+      "sources": [
+        {
+          "title": "Omgangssyge (virus)",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/omgangssyge-virus/"
+        },
+        {
+          "title": "Sindbis Feber",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/sindbis-feber/"
+        }
+      ],
+      "retrieval_query": "kastet op, diarré lidt feber. fejler?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q017",
+      "category": "duration",
+      "question": "Hvor lang tid går der fra smitte med norovirus til symptomer?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Tarminfektion med norovirus",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Der går normalt 12-72 timer fra smitte, til man får symptomer på norovirus. De fleste tilfælde har et mildt forløb, der går over af sig selv i løbet af 2-3 døgn.\n\nKilde: Tarminfektion med norovirus",
+      "sources": [
+        {
+          "title": "Tarminfektion med norovirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/tarminfektion-med-norovirus/"
+        }
+      ],
+      "retrieval_query": "lang tid går smitte norovirus symptomer?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q018",
+      "category": "duration",
+      "question": "Hvor længe varer norovirus typisk?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Tarminfektion med norovirus",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.5,
+      "unknown_ok": null,
+      "answer": "En norovirusinfektion går som regel over af sig selv i løbet af 2-3 døgn. De fleste tilfælde har et mildt forløb, men meget svækkede personer risikerer at blive syge i længere tid. Det er desuden vigtigt at vente 48 timer efter ophør af diarré og opkastninger, før man laver mad til andre.\n\nKilde: Tarminfektion med norovirus",
+      "sources": [
+        {
+          "title": "Tarminfektion med norovirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/tarminfektion-med-norovirus/"
+        }
+      ],
+      "retrieval_query": "længe varer norovirus typisk?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q019",
+      "category": "factual",
+      "question": "Hvad er rotavirus en almindelig årsag til?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Rotavirusinfektion",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Rotavirus er både i Danmark og globalt den mest almindelige årsag til svær diarrésygdom (akut viral gastroenteritis) hos børn under 5 år. Det er desuden en hyppig årsag til akut diarre hos voksne. I udviklingslande er rotavirus en hyppig årsag til dødsfald på grund af diarré hos børn under 5 år.\n\nKilde: Rotavirusinfektion",
+      "sources": [
+        {
+          "title": "Rotavirusinfektion",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/rotavirusinfektion/"
+        }
+      ],
+      "retrieval_query": "rotavirus almindelig årsag til?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q020",
+      "category": "statistics",
+      "question": "Hvor mange tilfælde af rotavirusinfektion er der cirka årligt blandt børn i Danmark?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Rotavirusinfektion",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Der er hvert år omkring 45.000 tilfælde af maveinfektion forårsaget af rotavirus blandt børn i Danmark. Disse tilfælde medfører typisk 10.000 kontakter til lægen og 1.000 indlæggelser. Svaret kommer fra kilden \"Rotavirusinfektion\".",
+      "sources": [
+        {
+          "title": "Rotavirusinfektion",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/rotavirusinfektion/"
+        }
+      ],
+      "retrieval_query": "tilfælde rotavirusinfektion cirka årligt blandt børn danmark?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q021",
+      "category": "pregnancy",
+      "question": "Hvorfor kan parvovirus være relevant under graviditet?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Parvovirusinfektion i graviditeten",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.75,
+      "unknown_ok": null,
+      "answer": "Parvovirus B19 er relevant under graviditet, fordi virus angriber forstadier til røde blodlegemer i fostrets knoglemarv og lever. Dette kan medføre nedsat produktion af røde blodlegemer, hvilket kan føre til blodmangel (anæmi) hos fostret. Ved en akut infektion kan det blive nødvendigt med ultralydsundersøgelser for at afklare, om der er tegn på alvorlig infektion hos fostret.\n\nKilder: Infektion med parvovirus og Parvovirusinfektion i graviditeten.",
+      "sources": [
+        {
+          "title": "Infektion med parvovirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/infektion-med-parvovirus/"
+        },
+        {
+          "title": "Parvovirusinfektion i graviditeten",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/parvovirusinfektion-i-graviditeten/"
+        }
+      ],
+      "retrieval_query": "hvorfor kan parvovirus relevant under graviditet?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q022",
+      "category": "factual",
+      "question": "Hvad er TBE?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "TBE - tick borne encephalitis",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.5,
+      "unknown_ok": null,
+      "answer": "TBE (tick borne encephalitis) er en alvorlig virusinfektion, der forekommer i blandt andet Skandinavien, Centraleuropa og de baltiske lande. Sygdommen er stadig sjælden i Danmark, men der ses en geografisk spredning. For de personer, der udvikler hjernebetændelse, kan omkring 35 % få senfølger som nedsat hørelse, balancebesvær, lammelser eller koncentrationsproblemer. Der findes ingen specifik behandling mod virusset, så behandlingen er symptomatisk og understøttende.\n\nKilde: TBE - tick borne encephalitis",
+      "sources": [
+        {
+          "title": "TBE - tick borne encephalitis",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/tbe-tick-borne-encephalitis/"
+        }
+      ],
+      "retrieval_query": "tbe?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q023",
+      "category": "treatment",
+      "question": "Findes der specifik behandling mod TBE?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "TBE - tick borne encephalitis",
+      "retrieval_hit": true,
+      "keyword_coverage": 0.5,
+      "unknown_ok": null,
+      "answer": "Nej, der findes ingen specifik behandling mod TBE. Da sygdommen skyldes et virus, har antibiotika ingen effekt. Behandlingen er i stedet symptomatisk og understøttende med det formål at forebygge alvorlige hjerneskader. Ved hjernebetændelse er det meget vigtigt at blive indlagt på sygehus, og der kan efterfølgende være behov for neuro-rehabilitering.\n\nKilde: TBE - tick borne encephalitis",
+      "sources": [
+        {
+          "title": "TBE - tick borne encephalitis",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/tbe-tick-borne-encephalitis/"
+        }
+      ],
+      "retrieval_query": "findes specifik behandling tbe?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q024",
+      "category": "urgent",
+      "question": "Hvad skal man gøre, hvis man tror man er smittet med Marburgvirus?",
+      "expected_behavior": "answer_from_context",
+      "expected_source_title": "Marburgvirus",
+      "retrieval_hit": true,
+      "keyword_coverage": 1.0,
+      "unknown_ok": null,
+      "answer": "Hvis man tror, man er smittet med Marburgvirus, skal man straks kontakte læge telefonisk. Lægen kan efterfølgende stille diagnosen baseret på symptomer og sygehistorie, og det er muligt at påvise virus i blodet eller sekreter. Der findes ingen godkendt, specifik behandling mod Marburgvirus, men komplikationer kan behandles med væske, blodtransfusioner, dialyse og respirator.\n\nKilde: Marburgvirus",
+      "sources": [
+        {
+          "title": "Marburgvirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/marburgvirus/"
+        },
+        {
+          "title": "Infektion med parvovirus",
+          "url": "https://www.sundhed.dk/borger/patienthaandbogen/infektioner/sygdomme/virusinfektioner/infektion-med-parvovirus/"
+        }
+      ],
+      "retrieval_query": "gøre, smittet marburgvirus?",
+      "rewritten_query": null
+    },
+    {
+      "id": "q025",
+      "category": "out_of_scope_medical",
+      "question": "Hvad er symptomerne på diabetes type 2?",
+      "expected_behavior": "unknown",
+      "expected_source_title": null,
+      "retrieval_hit": null,
+      "keyword_coverage": 1.0,
+      "unknown_ok": true,
+      "answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+      "sources": [],
+      "retrieval_query": "symptomerne diabetes type 2?",
+      "rewritten_query": "diabetes type 2 symptomer, hyperglykæmi, øget tørst, hyppig vandladning, træthed"
+    },
+    {
+      "id": "q026",
+      "category": "out_of_scope_medical",
+      "question": "Hvordan behandles et brækket håndled?",
+      "expected_behavior": "unknown",
+      "expected_source_title": null,
+      "retrieval_hit": null,
+      "keyword_coverage": 1.0,
+      "unknown_ok": true,
+      "answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+      "sources": [],
+      "retrieval_query": "hvordan behandles brækket håndled?",
+      "rewritten_query": "behandling brækket håndled, håndledsfraktur, radiusfraktur, håndledsbrud"
+    },
+    {
+      "id": "q027",
+      "category": "out_of_scope_non_medical",
+      "question": "Hvilke aktier bør jeg købe i morgen?",
+      "expected_behavior": "unknown",
+      "expected_source_title": null,
+      "retrieval_hit": null,
+      "keyword_coverage": 1.0,
+      "unknown_ok": true,
+      "answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+      "sources": [],
+      "retrieval_query": "hvilke aktier bør købe morgen?",
+      "rewritten_query": "aktieanbefalinger, aktiemarkedet, investeringstips"
+    },
+    {
+      "id": "q028",
+      "category": "out_of_scope_non_medical",
+      "question": "Kan du lave en opskrift på lasagne?",
+      "expected_behavior": "unknown",
+      "expected_source_title": null,
+      "retrieval_hit": null,
+      "keyword_coverage": 1.0,
+      "unknown_ok": true,
+      "answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+      "sources": [],
+      "retrieval_query": "kan lave opskrift lasagne?",
+      "rewritten_query": "opskrift lasagne"
+    }
+  ]
+}

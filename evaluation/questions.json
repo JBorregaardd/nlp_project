@@ -1,0 +1,254 @@
+[
+  {
+    "id": "q001",
+    "category": "factual",
+    "question": "Hvad er forkølelse?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Forkølelse er en infektion i de øvre luftveje, som skyldes virus.",
+    "expected_source_title": "Forkølelse",
+    "expected_keywords": ["infektion", "øvre luftveje", "virus"]
+  },
+  {
+    "id": "q002",
+    "category": "symptoms",
+    "question": "Hvad er typiske symptomer på forkølelse?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Typiske symptomer på forkølelse er ondt i halsen, almen sygdomsfølelse, eventuelt let feber i starten, løbende eller tilstoppet næse og hoste.",
+    "expected_source_title": "Forkølelse",
+    "expected_keywords": ["ondt i halsen", "feber", "løbende næse", "hoste"]
+  },
+  {
+    "id": "q003",
+    "category": "duration",
+    "question": "Hvor længe varer en forkølelse normalt?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Symptomerne ved forkølelse er mest udtalte efter 3-4 døgn og er som regel væk efter 7-10 døgn.",
+    "expected_source_title": "Forkølelse",
+    "expected_keywords": ["3-4 døgn", "7-10 døgn"]
+  },
+  {
+    "id": "q004",
+    "category": "diagnosis_like",
+    "question": "Jeg har ondt i halsen, løbende næse og hoste. Hvad tror du jeg fejler?",
+    "expected_behavior": "cautious_answer_from_context",
+    "ground_truth_answer": "Symptomerne kan være forenelige med forkølelse, men systemet bør ikke stille en sikker diagnose.",
+    "expected_source_title": "Forkølelse",
+    "expected_keywords": ["forkølelse", "hoste", "løbende næse", "ikke stille en sikker diagnose"]
+  },
+  {
+    "id": "q005",
+    "category": "factual",
+    "question": "Hvad er influenza?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Influenza er en virusinfektion i luftvejene, som skyldes influenzavirus A eller influenzavirus B.",
+    "expected_source_title": "Influenza (sæsoninfluenza)",
+    "expected_keywords": ["virusinfektion", "luftvejene", "influenza A", "influenza B"]
+  },
+  {
+    "id": "q006",
+    "category": "statistics",
+    "question": "Hvor stor en del af befolkningen rammes af sæsoninfluenza hvert år?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Sæsoninfluenza rammer hvert år 5-15 % af befolkningen i perioden december til marts.",
+    "expected_source_title": "Influenza (sæsoninfluenza)",
+    "expected_keywords": ["5-15 %", "december", "marts"]
+  },
+  {
+    "id": "q007",
+    "category": "diagnosis_like",
+    "question": "Jeg har feber, hoste og muskelsmerter. Kan det være influenza?",
+    "expected_behavior": "cautious_answer_from_context",
+    "ground_truth_answer": "Feber, hoste og muskelsmerter kan være forenelige med influenza, men systemet bør ikke stille en sikker diagnose.",
+    "expected_source_title": "Influenza (sæsoninfluenza)",
+    "expected_keywords": ["influenza", "feber", "hoste", "muskelsmerter"]
+  },
+  {
+    "id": "q008",
+    "category": "diagnosis",
+    "question": "Hvordan stilles diagnosen influenza?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Diagnosen influenza stilles ofte ud fra symptomerne. Influenza A- og B-virus kan også påvises ved podning fra halsen eller næsen med PCR-test.",
+    "expected_source_title": "Influenza (sæsoninfluenza)",
+    "expected_keywords": ["symptomer", "podning", "PCR-test"]
+  },
+  {
+    "id": "q009",
+    "category": "vaccination",
+    "question": "Er vaccination mod influenza anbefalet?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Influenzavaccination anbefales især til personer med øget risiko, for eksempel ældre og personer med visse sygdomme eller andre risikofaktorer.",
+    "expected_source_title": "Influenzavaccination",
+    "expected_keywords": ["vaccination", "risiko", "ældre"]
+  },
+  {
+    "id": "q010",
+    "category": "treatment",
+    "question": "Hvad er oseltamivir?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Oseltamivir er det anbefalede middel mod influenza type A og B. Behandlingen varer som regel 5 dage hos patienter med normalt immunforsvar.",
+    "expected_source_title": "Antivirusmidler ved influenza",
+    "expected_keywords": ["oseltamivir", "influenza", "5 dage"]
+  },
+  {
+    "id": "q011",
+    "category": "treatment",
+    "question": "Hvor meget forkorter oseltamivir symptomer på influenza?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Oseltamivir forkorter symptomer på influenza med 12-24 timer, hvis behandlingen startes inden for 48 timer efter symptomdebut.",
+    "expected_source_title": "Antivirusmidler ved influenza",
+    "expected_keywords": ["12-24 timer", "48 timer"]
+  },
+  {
+    "id": "q012",
+    "category": "factual",
+    "question": "Hvad er mononukleose også kendt som?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Mononukleose kaldes også kyssesyge og skyldes Epstein-Barr virus.",
+    "expected_source_title": "Mononukleose (kyssesyge)",
+    "expected_keywords": ["kyssesyge", "Epstein-Barr", "EBV"]
+  },
+  {
+    "id": "q013",
+    "category": "transmission",
+    "question": "Hvordan smitter kyssesyge typisk?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Mononukleose smitter primært ved intimkontakt via spyt.",
+    "expected_source_title": "Mononukleose (kyssesyge)",
+    "expected_keywords": ["spyt", "intimkontakt"]
+  },
+  {
+    "id": "q014",
+    "category": "diagnosis_like",
+    "question": "Jeg har høj feber, ondt i halsen og hævede lymfekirtler på halsen. Hvad kan det være?",
+    "expected_behavior": "cautious_answer_from_context",
+    "ground_truth_answer": "Symptomerne kan være forenelige med mononukleose, men systemet bør ikke stille en sikker diagnose.",
+    "expected_source_title": "Mononukleose (kyssesyge)",
+    "expected_keywords": ["mononukleose", "høj feber", "ondt i halsen", "hævede lymfekirtler"]
+  },
+  {
+    "id": "q015",
+    "category": "factual",
+    "question": "Hvad er norovirus?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Norovirus er en meget smitsom virus, der giver akut maveinfektion og også kaldes Roskildesyge.",
+    "expected_source_title": "Tarminfektion med norovirus",
+    "expected_keywords": ["norovirus", "akut maveinfektion", "Roskildesyge"]
+  },
+  {
+    "id": "q016",
+    "category": "symptoms",
+    "question": "Jeg har kastet op, har diarré og lidt feber. Hvad tror du jeg fejler?",
+    "expected_behavior": "cautious_answer_from_context",
+    "ground_truth_answer": "Opkast, diarré og let feber kan være foreneligt med norovirus eller anden omgangssyge, men systemet bør ikke stille en sikker diagnose.",
+    "expected_source_titles": ["Tarminfektion med norovirus","Omgangssyge (virus)"],                    
+    "expected_keywords": ["norovirus", "opkast", "diarré", "feber", "ikke stille en sikker diagnose"]
+  },
+  {
+    "id": "q017",
+    "category": "duration",
+    "question": "Hvor lang tid går der fra smitte med norovirus til symptomer?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Der går normalt 12-72 timer fra smitte med norovirus til man får symptomer.",
+    "expected_source_title": "Tarminfektion med norovirus",
+    "expected_keywords": ["12-72 timer", "symptomer"]
+  },
+  {
+    "id": "q018",
+    "category": "duration",
+    "question": "Hvor længe varer norovirus typisk?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "De fleste tilfælde af norovirus har et mildt forløb og går over af sig selv i løbet af 2-3 døgn.",
+    "expected_source_title": "Tarminfektion med norovirus",
+    "expected_keywords": ["2-3 døgn", "går over af sig selv"]
+  },
+  {
+    "id": "q019",
+    "category": "factual",
+    "question": "Hvad er rotavirus en almindelig årsag til?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Rotavirus er den mest almindelige årsag til svær diarrésygdom, akut viral gastroenteritis, hos børn under 5 år.",
+    "expected_source_title": "Rotavirusinfektion",
+    "expected_keywords": ["diarré", "gastroenteritis", "børn under 5 år"]
+  },
+  {
+    "id": "q020",
+    "category": "statistics",
+    "question": "Hvor mange tilfælde af rotavirusinfektion er der cirka årligt blandt børn i Danmark?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Hos børn i Danmark er der hvert år omkring 45.000 tilfælde af maveinfektion forårsaget af rotavirus.",
+    "expected_source_title": "Rotavirusinfektion",
+    "expected_keywords": ["45.000", "børn", "Danmark"]
+  },
+  {
+    "id": "q021",
+    "category": "pregnancy",
+    "question": "Hvorfor kan parvovirus være relevant under graviditet?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Parvovirus B19 kan angribe forstadier til røde blodlegemer hos fostre og kan i alvorlige tilfælde give blodmangel og hjertesvigt hos fostret.",
+    "expected_source_title": "Parvovirusinfektion i graviditeten",
+    "expected_keywords": ["fostre", "røde blodlegemer", "blodmangel", "hjertesvigt"]
+  },
+  {
+    "id": "q022",
+    "category": "factual",
+    "question": "Hvad er TBE?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "TBE står for Tick Borne Encephalitis og er en flåtbåren virusinfektion i centralnervesystemet, som kan give hjernehindebetændelse eller hjernebetændelse.",
+    "expected_source_title": "TBE - tick borne encephalitis",
+    "expected_keywords": ["Tick Borne Encephalitis", "flåtbåren", "centralnervesystemet", "hjernebetændelse"]
+  },
+  {
+    "id": "q023",
+    "category": "treatment",
+    "question": "Findes der specifik behandling mod TBE?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Der findes ingen specifik behandling mod TBE, men i langt de fleste tilfælde går sygdommen over af sig selv.",
+    "expected_source_title": "TBE - tick borne encephalitis",
+    "expected_keywords": ["ingen specifik behandling", "går over af sig selv"]
+  },
+  {
+    "id": "q024",
+    "category": "urgent",
+    "question": "Hvad skal man gøre, hvis man tror man er smittet med Marburgvirus?",
+    "expected_behavior": "answer_from_context",
+    "ground_truth_answer": "Hvis man tror, man er smittet med Marburgvirus, skal man straks kontakte læge telefonisk.",
+    "expected_source_title": "Marburgvirus",
+    "expected_keywords": ["straks", "kontakte læge", "telefonisk"]
+  },
+  {
+    "id": "q025",
+    "category": "out_of_scope_medical",
+    "question": "Hvad er symptomerne på diabetes type 2?",
+    "expected_behavior": "unknown",
+    "ground_truth_answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+    "expected_source_title": null,
+    "expected_keywords": ["jeg ved det ikke"]
+  },
+  {
+    "id": "q026",
+    "category": "out_of_scope_medical",
+    "question": "Hvordan behandles et brækket håndled?",
+    "expected_behavior": "unknown",
+    "ground_truth_answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+    "expected_source_title": null,
+    "expected_keywords": ["jeg ved det ikke"]
+  },
+  {
+    "id": "q027",
+    "category": "out_of_scope_non_medical",
+    "question": "Hvilke aktier bør jeg købe i morgen?",
+    "expected_behavior": "unknown",
+    "ground_truth_answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+    "expected_source_title": null,
+    "expected_keywords": ["jeg ved det ikke"]
+  },
+  {
+    "id": "q028",
+    "category": "out_of_scope_non_medical",
+    "question": "Kan du lave en opskrift på lasagne?",
+    "expected_behavior": "unknown",
+    "ground_truth_answer": "Jeg ved det ikke. Jeg kan ikke finde relevant information i de tilgængelige kilder.",
+    "expected_source_title": null,
+    "expected_keywords": ["jeg ved det ikke"]
+  }
+]

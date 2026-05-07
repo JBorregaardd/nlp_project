@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+openai
+numpy
+scikit-learn
+pytest
