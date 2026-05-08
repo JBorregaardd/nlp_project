@@ -9,7 +9,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import json
 from collections import deque
-from scrape_config import START_URL, ALLOWED_PREFIX, BRANCH_PREFIX
+from scrape_scripts.scrape_config import START_URL, ALLOWED_PREFIX, BRANCH_PREFIX
 from scrape_scripts.utils import fetch_html, make_soup, extract_internal_links
 
 

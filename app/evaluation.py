@@ -1,12 +1,10 @@
 import json
 from pathlib import Path
 
-import requests
+from app.ask import ask
 
 
-API_URL = "http://127.0.0.1:8000/v1/ask"
 QUESTIONS_PATH = Path("evaluation/questions.json")
-
 
 UNKNOWN_PHRASES = [
     "jeg ved det ikke",
@@ -71,22 +69,16 @@ def answer_is_unknown(answer: str) -> bool:
     return any(phrase in answer_norm for phrase in UNKNOWN_PHRASES)
 
 
-def evaluate_item(item, mode="sparse", top_k=5):
-    response = requests.post(
-        API_URL,
-        json={
-            "question": item["question"],
-            "top_k": top_k,
-            "mode": mode,
-        },
-        timeout=180,
+def evaluate_item(item, retriever, mode="hybrid", top_k=3):
+    result = ask(
+        question=item["question"],
+        retriever=retriever,
+        top_k=top_k,
+        mode=mode,
     )
 
-    response.raise_for_status()
-    data = response.json()
-
-    answer = data.get("answer", "")
-    sources = data.get("sources", [])
+    answer = result.get("answer", "")
+    sources = result.get("sources", [])
 
     expected_behavior = item.get("expected_behavior", "answer_from_context")
     expected_unknown = expected_behavior == "unknown"
@@ -107,6 +99,7 @@ def evaluate_item(item, mode="sparse", top_k=5):
         "question": item["question"],
         "expected_behavior": expected_behavior,
         "expected_source_title": item.get("expected_source_title"),
+        "acceptable_source_titles": item.get("acceptable_source_titles", []),
         "retrieval_hit": retrieval_hit,
         "keyword_coverage": keyword_result["coverage"],
         "expected_keywords": expected_keywords,
@@ -117,12 +110,12 @@ def evaluate_item(item, mode="sparse", top_k=5):
         "unknown_correct": unknown_correct,
         "answer": answer,
         "sources": sources,
-        "retrieval_query": data.get("retrieval_query"),
-        "rewritten_query": data.get("rewritten_query"),
+        "retrieval_query": result.get("retrieval_query"),
+        "rewritten_query": result.get("rewritten_query"),
     }
 
 
-def run_eval(mode="hybrid", top_k=3, limit=None):
+def run_eval(retriever, mode="hybrid", top_k=3, limit=None):
     questions = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
 
     if limit is not None:
@@ -130,25 +123,23 @@ def run_eval(mode="hybrid", top_k=3, limit=None):
 
     results = []
 
-    for i, item in enumerate(questions, start=1):
-        print(f"[{i}/{len(questions)}] {item['id']} - {item['question']}")
-
+    for item in questions:
         try:
-            result = evaluate_item(item, mode=mode, top_k=top_k)
+            result = evaluate_item(
+                item=item,
+                retriever=retriever,
+                mode=mode,
+                top_k=top_k,
+            )
         except Exception as exc:
             result = {
-                "id": item["id"],
-                "category": item["category"],
-                "question": item["question"],
+                "id": item.get("id"),
+                "category": item.get("category"),
+                "question": item.get("question"),
                 "error": str(exc),
             }
 
         results.append(result)
-
-        print(f"  retrieval_hit: {result.get('retrieval_hit')}")
-        print(f"  keyword_coverage: {result.get('keyword_coverage')}")
-        print(f"  unknown_correct: {result.get('unknown_correct')}")
-        print()
 
     in_scope = [
         r for r in results
@@ -178,7 +169,7 @@ def run_eval(mode="hybrid", top_k=3, limit=None):
         if "error" not in r and r.get("unknown_correct") is not None
     ]
 
-    summary = {
+    return {
         "mode": mode,
         "top_k": top_k,
         "num_questions": len(results),
@@ -198,23 +189,3 @@ def run_eval(mode="hybrid", top_k=3, limit=None):
         ),
         "results": results,
     }
-
-    results_path = Path(f"evaluation/results_{mode}.json")
-    results_path.write_text(
-        json.dumps(summary, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
-    print("Summary")
-    print("-------")
-    print(f"Questions: {summary['num_questions']}")
-    print(f"In-scope: {summary['num_in_scope']}")
-    print(f"Out-of-scope: {summary['num_out_of_scope']}")
-    print(f"Retrieval hit rate: {summary['retrieval_hit_rate']}")
-    print(f"Average keyword coverage: {summary['avg_keyword_coverage']}")
-    print(f"Unknown accuracy: {summary['unknown_accuracy']}")
-    print(f"Saved to: {results_path}")
-
-
-if __name__ == "__main__":
-    run_eval(mode="hybrid", top_k=3)

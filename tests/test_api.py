@@ -25,25 +25,22 @@ def test_health_endpoint():
     assert response.json() == {"status": "ok"}
 
 
-def test_search_endpoint_returns_results(monkeypatch):
-    monkeypatch.setattr(main_module, "retriever", FakeRetriever())
-
+def test_ask_endpoint():
     client = TestClient(main_module.app)
 
+    # Patch the retriever with our fake retriever
+    main_module.retriever = FakeRetriever()
+
     response = client.post(
-        "/v1/search",
+        "/v1/ask",
         json={
-            "query": "hoste og løbende næse",
-            "top_k": 1,
+            "question": "Hvad er forkølelse?",
+            "top_k": 3,
             "mode": "hybrid",
         },
     )
 
     assert response.status_code == 200
-
     data = response.json()
-
-    assert data["query"] == "hoste og løbende næse"
-    assert data["mode"] == "hybrid"
-    assert len(data["results"]) == 1
-    assert data["results"][0]["title"] == "Forkølelse"
+    assert "answer" in data
+    assert "sources" in data

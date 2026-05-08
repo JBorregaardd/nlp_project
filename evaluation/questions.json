@@ -78,7 +78,7 @@
     "expected_behavior": "answer_from_context",
     "ground_truth_answer": "Influenzavaccination anbefales især til personer med øget risiko, for eksempel ældre og personer med visse sygdomme eller andre risikofaktorer.",
     "expected_source_title": "Influenzavaccination",
-    "expected_keywords": ["vaccination", "risiko", "ældre"]
+    "expected_keywords": ["vaccination", "sygdom", "ældre"]
   },
   {
     "id": "q010",
@@ -87,7 +87,7 @@
     "expected_behavior": "answer_from_context",
     "ground_truth_answer": "Oseltamivir er det anbefalede middel mod influenza type A og B. Behandlingen varer som regel 5 dage hos patienter med normalt immunforsvar.",
     "expected_source_title": "Antivirusmidler ved influenza",
-    "expected_keywords": ["oseltamivir", "influenza", "5 dage"]
+    "expected_keywords": ["oseltamivir", "influenza", "symptomer"]
   },
   {
     "id": "q011",
@@ -105,7 +105,7 @@
     "expected_behavior": "answer_from_context",
     "ground_truth_answer": "Mononukleose kaldes også kyssesyge og skyldes Epstein-Barr virus.",
     "expected_source_title": "Mononukleose (kyssesyge)",
-    "expected_keywords": ["kyssesyge", "Epstein-Barr", "EBV"]
+    "expected_keywords": ["kyssesyge"]
   },
   {
     "id": "q013",

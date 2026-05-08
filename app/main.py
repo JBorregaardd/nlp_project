@@ -1,11 +1,14 @@
 import os
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 from pydantic import BaseModel, Field
 
 from app.ask import ask
 from app.setup import build_retriever
+from app.evaluation import run_eval
 
 ARTICLES_PATH = os.getenv(
     "ARTICLES_PATH",
@@ -46,39 +49,16 @@ class AskRequest(BaseModel):
     mode: str = Field("hybrid")
 
 
-class SearchRequest(BaseModel):
-    query: str = Field(..., min_length=1)
-    top_k: int = Field(5, ge=1, le=10)
+
+class EvaluationRequest(BaseModel):
+    top_k: int = Field(3, ge=1, le=10)
     mode: str = Field("hybrid")
-
-
+    limit: int | None = Field(None, ge=1, le=50)
 
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
-
-@app.post("/v1/search")
-def search_endpoint(req: SearchRequest):
-    if retriever is None:
-        raise HTTPException(status_code=500, detail="Retriever is not initialized")
-
-    try:
-        results = retriever.search(
-            query=req.query,
-            top_k=req.top_k,
-            mode=req.mode,
-        )
-    except ValueError as exc:
-        raise HTTPException(status_code=400, detail=str(exc)) from exc
-    except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc)) from exc
-
-    return {
-        "query": req.query,
-        "mode": req.mode,
-        "results": results,
-    }
 
 
 @app.post("/v1/ask")
@@ -99,3 +79,26 @@ def ask_endpoint(req: AskRequest):
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     return result
+
+@app.post("/v1/evaluate")
+def evaluate_endpoint(req: EvaluationRequest):
+    if retriever is None:
+        raise HTTPException(status_code=500, detail="Retriever is not initialized")
+
+    try:
+        result = run_eval(
+            retriever=retriever,
+            top_k=req.top_k,
+            mode=req.mode,
+            limit=req.limit,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+
+    return result
+
+@app.get("/")
+def frontend():
+    return FileResponse("app/static/index.html")
+
+app.mount("/", StaticFiles(directory="app/static", html=True), name="static")

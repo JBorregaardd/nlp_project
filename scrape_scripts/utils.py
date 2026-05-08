@@ -9,7 +9,7 @@ from urllib.parse import urljoin, urlparse, urldefrag
 import requests
 from bs4 import BeautifulSoup
 
-from scrape_config import HEADERS, TIMEOUT_SECONDS, REQUEST_DELAY_SECONDS
+from scrape_scripts.scrape_config import HEADERS, TIMEOUT_SECONDS, REQUEST_DELAY_SECONDS
 
 
 def fetch_html(url: str) -> str | None:

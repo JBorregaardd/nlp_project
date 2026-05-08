@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grounded Medical QA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Grounded Medical QA</h1>
+      <p>
+        Stil spørgsmål til Sundhed.dk-artikler om virusinfektioner.
+        Svarene genereres kun ud fra de tilgængelige kilder.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Spørg systemet</h2>
+
+      <label for="question">Spørgsmål</label>
+      <textarea
+        id="question"
+        rows="4"
+        placeholder="Fx: Hvad kan hoste og feber skyldes?"
+      ></textarea>
+
+      <div class="controls">
+        <div>
+          <label for="mode">Retrieval mode</label>
+          <select id="mode">
+            <option value="hybrid" selected>hybrid</option>
+            <option value="sparse">sparse</option>
+            <option value="dense">dense</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="topK">top_k</label>
+          <input id="topK" type="number" min="1" max="10" value="3" />
+        </div>
+      </div>
+
+      <button id="askButton">Spørg</button>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="answerCard" class="card hidden">
+      <h2>Svar</h2>
+      <div id="answer" class="answer"></div>
+    </section>
+
+    <section id="sourcesCard" class="card hidden">
+      <h2>Kilder</h2>
+      <ul id="sources"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Evaluation</h2>
+      <p>
+        Kør det lille test-datasæt og se retrieval hit rate, keyword coverage og unknown accuracy.
+      </p>
+
+      <div class="controls">
+        <div>
+          <label for="evalMode">Retrieval mode</label>
+          <select id="evalMode">
+            <option value="hybrid" selected>hybrid</option>
+            <option value="sparse">sparse</option>
+            <option value="dense">dense</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="evalTopK">top_k</label>
+          <input id="evalTopK" type="number" min="1" max="10" value="3" />
+        </div>
+      </div>
+
+      <div class="controls">
+        <div>
+          <label for="evalLimit">Limit</label>
+          <input id="evalLimit" type="number" min="1" max="50" placeholder="Alle" />
+        </div>
+      </div>
+
+      <button id="evalButton">Run evaluation</button>
+      <div id="evalStatus" class="status"></div>
+    </section>
+
+    <section id="evalSummaryCard" class="card hidden">
+      <h2>Evaluation summary</h2>
+      <div class="metrics">
+        <div>
+          <strong id="metricQuestions">-</strong>
+          <span>Questions</span>
+        </div>
+        <div>
+          <strong id="metricRetrieval">-</strong>
+          <span>Source hit rate</span>
+        </div>
+        <div>
+          <strong id="metricCoverage">-</strong>
+          <span>Keyword coverage</span>
+        </div>
+        <div>
+          <strong id="metricUnknown">-</strong>
+          <span>Unknown accuracy</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="evalResultsCard" class="card hidden">
+      <h2>Evaluation results</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Question</th>
+              <th>Retrieval</th>
+              <th>Coverage</th>
+              <th>Answerable</th>
+            </tr>
+          </thead>
+          <tbody id="evalResultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Eksempelspørgsmål</h2>
+      <div class="examples">
+        <button class="example">Hvad er forkølelse?</button>
+        <button class="example">Jeg har feber, hoste og muskelsmerter. Kan det være influenza?</button>
+        <button class="example">Hvor længe varer norovirus typisk?</button>
+        <button class="example">Hvad er symptomerne på diabetes type 2?</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
