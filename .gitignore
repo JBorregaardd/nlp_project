@@ -9,6 +9,6 @@ data/cache/
 *.log
 debug.html
 
-
-
+app/__pycache__/
+tests/__pycache__/
 evaluation/results_hybrid_v1.json
